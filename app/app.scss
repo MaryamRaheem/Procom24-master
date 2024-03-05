@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap');
+
+// @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap');
+@import "globals.scss";
+html {
+  scroll-snap-type: "y mandatory";
+  scroll-behavior: smooth;
+}
+
+body {
+  // background: #000;
+  overflow-x: hidden;
+  color: #fff;
+}
+
+section {
+  // height: 100vh;
+  scroll-snap-align: center;
+}
+
+.hero-section {
+  // background-color: #1e1e1e;
+  position: relative;
+  color: #fff;
+  // background: linear-gradient(
+  //   305deg,
+  //   rgba(33, 65, 111, 1) 4%,
+  //   rgba(40, 29, 68, 1) 50%
+  // );
+  // background: url('/assets/images.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    // background-color: rgba(63, 25, 155, 0.3);
+    // background-image: url("/assets/stars.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .hero_container {
+    background-image: url('/assets/bg.jpg');
+    background-size: cover;
+    border-radius: 20px;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      content: "";
+      // background-color: rgba(63, 25, 155, 0.3);
+      background-color: #000;
+      opacity: .7;
+      // background-image: url("/assets/stars.webp");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .landing-content {
+    // width: 100%;
+    // text-align: center;
+    // text-align: -moz-center;
+    // text-align: -webkit-center;
+  }
+
+  // .p-shadow {
+  //   width: 100%;
+  //   display: block;
+  //   border-radius: 90%;
+  //   height: 40px;
+  //   background: #8e84b0;
+  //   filter: blur(40px);
+  //   margin-top: 50px;
+  // }
+
+  // .main-logo {
+  //   width: 25%;
+  //   margin: 0 auto;
+  //   display: block;
+  // }
+}
+
+.round-blur-effect-1 {
+  width: 150px;
+  height: 150px;
+  // top: 20%;
+  // left: 30%;
+  background: #0018ed;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.round-blur-effect-2 {
+  width: 150px;
+  height: 150px;
+  // top: 30%;
+  // left: 40%;
+  background: #f34e59;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.round-blur-effect-3 {
+  width: 150px;
+  height: 150px;
+  // top: 70%;
+  // left: 40%;
+  background: #dc4ef3;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.highlight-text {
+  color: transparent;
+  // color: #8b14e9 !important;
+  // border: 1px solid #8b14e9;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #8b14e9;
+  // -webkit-text-stroke: #dc4ef3;
+}
+
+.hm-burger {
+  width: 60px;
+  text-align: right;
+  &::after , &::before {
+    content: "";
+    display: block;
+    width: 50%;
+    background: #fff;
+    height: 1px;
+    margin: auto;
+    position: relative;
+    transition: 0.3s;
+  }
+  &::after {
+    top: -5px;
+  }
+  &::before {
+    top: 5px;
+  }
+
+}
+.hm-burger-active {
+  &::after {
+    top: -1px;
+    transform: rotate(45deg);
+  }
+  &::before {
+    top: 1px;
+    transform: rotate(-45deg);
+  }
+}
+
+//==================About Section=================
+
+.about-section{
+  color: #fff;
+  // background-color: #000;   
+}
+
+.accordian{
+  color: #fff;
+  font-size: large;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.img-card{
+  width: 170px;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+  background-color: none;
+  margin: 10px;
+  border: 2px solid #8b14e9;
+}
+
+.curl-text{
+  font-family: 'Dancing Script', cursive;
+  font-size: 72px;
+}
+
+
+.dotsImg {
+  display: block;
+  position: absolute;
+  width: 80%;
+  height: 600px;
+  top: 0px;
+  right: 0px;
+  object-fit: cover;
+}
+
+// max -width 1024
+@media screen and (max-width: 1024px) {
+  .dotsImg {
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+// max width 500
+@media screen and (max-width: 500px) {
+  
+  .dotsImg {
+    width: 80%;
+    height: 100%;
+  }
+}
